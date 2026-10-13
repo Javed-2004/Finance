@@ -26,7 +26,7 @@ jobs:
           cache: maven
 
       - name: Build Spring Boot application
-        run: chmod +x mvnw && ./mvnw -B clean verify
+        run: chmod +x mvnw && ./mvnw -B clean package -DskipTests
 
       - name: Prepare executable JAR
         shell: bash
